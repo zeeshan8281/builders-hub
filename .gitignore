@@ -190,9 +190,9 @@ content/docs/rpcs/other/subnet-evm-rpc.mdx
 content/docs/rpcs/p-chain/rpc.mdx
 content/docs/rpcs/x-chain/rpc.mdx
 content/docs/tooling/cli-commands.mdx
-# Generated OpenAPI specs (fetched during build)
-public/openapi/glacier.json
-public/openapi/popsicle.json
+# Generated OpenAPI specs (committed to ensure consistent deployments)
+# public/openapi/glacier.json
+# public/openapi/popsicle.json
 
 # Generated OpenAPI documentation (auto-generated during build)
 content/docs/api-reference/data-api/**/*.mdx

@@ -19,6 +19,9 @@ export const { docs, meta } = defineDocs({
       index: z.boolean().default(false),
       edit_url: z.string().optional(),
     }),
+    postprocess: {
+      includeProcessedMarkdown: true,
+    },
   },
   meta: {
     schema: metaSchema.extend({
@@ -44,6 +47,9 @@ export const course = defineCollections({
     authors: z.array(z.string()).optional(),
     comments: z.boolean().default(false),
   }),
+  postprocess: {
+    includeProcessedMarkdown: true,
+  },
 });
 
 export const courseMeta = defineCollections({
@@ -71,6 +77,9 @@ export const codebaseEntrepreneur = defineCollections({
     authors: z.array(z.string()).optional(),
     comments: z.boolean().default(false),
   }),
+  postprocess: {
+    includeProcessedMarkdown: true,
+  },
 });
 
 export const codebaseEntrepreneurMeta = defineCollections({
@@ -95,6 +104,9 @@ export const integrations = defineCollections({
     baas_platform: z.string().optional(),
     featured: z.boolean().default(false).optional()
   }),
+  postprocess: {
+    includeProcessedMarkdown: true,
+  },
 });
 
 export const blog = defineCollections({
@@ -106,6 +118,9 @@ export const blog = defineCollections({
     date: z.string().date().or(z.date()).optional(),
     comments: z.boolean().default(false),
   }),
+  postprocess: {
+    includeProcessedMarkdown: true,
+  },
 });
 
 export default defineConfig({

@@ -32,6 +32,7 @@ export const { docs, meta } = defineDocs({
 
 export const course = defineCollections({
   type: 'doc',
+  async: true,
   dir: 'content/academy',
   schema: frontmatterSchema.extend({
     preview: z.string().optional(),
@@ -62,6 +63,7 @@ export const courseMeta = defineCollections({
 
 export const codebaseEntrepreneur = defineCollections({
   type: 'doc',
+  async: true,
   dir: 'content/codebase-entrepreneur',
   schema: frontmatterSchema.extend({
     preview: z.string().optional(),
@@ -111,6 +113,7 @@ export const integrations = defineCollections({
 
 export const blog = defineCollections({
   type: 'doc',
+  async: true,
   dir: 'content/blog',
   schema: frontmatterSchema.extend({
     authors: z.array(z.string()).optional(),

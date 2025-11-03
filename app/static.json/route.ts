@@ -17,12 +17,13 @@ export async function GET() {
         tag: 'docs'
       }
     }),
-    ...academy.getPages().map((page) => {
+    ...academy.getPages().map(async (page) => {
+      const loadedData = await page.data.load();
       return {
         title: page.data.title,
         url: page.url,
         _id: page.url,
-        structured: page.data.structuredData,
+        structured: loadedData.structuredData,
         description: page.data.description,
         tag: 'academy'
       }

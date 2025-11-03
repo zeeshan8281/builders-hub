@@ -84,12 +84,12 @@ export default async function Page(props: {
 
   const path = `content/academy${page.url.replace('/academy/', '/')}.mdx`;
   const editUrl = `https://github.com/ava-labs/builders-hub/edit/master/${path}`;
-  const MDX = page.data.body;
+  const { body: MDX, toc } = await page.data.load();
   const course = COURSES.official.find((c) => c.slug === page.slugs[0]);
 
   return (
     <DocsPage
-      toc={page.data.toc}
+      toc={toc}
       tableOfContent={{
         style: "clerk",
         single: false,

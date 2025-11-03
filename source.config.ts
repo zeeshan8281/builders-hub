@@ -113,7 +113,6 @@ export const integrations = defineCollections({
 
 export const blog = defineCollections({
   type: 'doc',
-  async: true,
   dir: 'content/blog',
   schema: frontmatterSchema.extend({
     authors: z.array(z.string()).optional(),
